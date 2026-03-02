@@ -46,15 +46,19 @@ function startWish(lang) {
     const lyricsContainer = document.getElementById('lyrics-lines');
     lyricsContainer.innerHTML = '';
 
+    console.log(`Displaying ${data.songMessages.length} song messages for ${lang}`);
+
     data.songMessages.forEach((text, index) => {
         const p = document.createElement('p');
         p.className = 'lyric-line';
         p.innerText = text;
-        p.style.transitionDelay = `${index * 0.2}s`;
+        p.style.transitionDelay = `${index * 0.3}s`; // Slightly slower stagger for better effect
         lyricsContainer.appendChild(p);
 
-        // Trigger animation in next frame
-        setTimeout(() => p.classList.add('visible'), 50);
+        // Trigger animation with a slightly longer delay to ensure DOM readiness
+        setTimeout(() => {
+            p.classList.add('visible');
+        }, 100);
     });
 }
 

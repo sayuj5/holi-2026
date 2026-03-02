@@ -145,6 +145,8 @@ body {
 .lyric-line.visible {
     opacity: 1;
     transform: translateY(0);
+    color: #ffffff;
+    /* Fallback color */
     background: linear-gradient(to right, #ff007f, #7209b7);
     -webkit-background-clip: text;
     background-clip: text;
