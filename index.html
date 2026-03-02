@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Holi - Festival of Colors</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Dancing+Script:wght@700&family=Hind+Siliguri:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <meta name="description" content="A vibrant Holi greeting website with musical wishes in English and Bengali.">
+</head>
+
+<body>
+    <div class="background-overlay"></div>
+
+    <main class="container">
+        <!-- Language Selection Screen -->
+        <section id="selection-screen" class="active">
+            <h1 class="glow-text">Happy Holi!</h1>
+            <p class="subtitle">Select your language for the festive wish</p>
+            <div class="lang-buttons">
+                <button id="btn-english" class="glass-btn">
+                    <span class="btn-text">English</span>
+                </button>
+                <button id="btn-bengali" class="glass-btn">
+                    <span class="btn-text">Bengali</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Wish Content Screen -->
+        <section id="wish-screen" class="hidden">
+            <div class="wish-card">
+                <div id="wish-text-container">
+                    <h2 id="wish-header">Wishing you a colorful Holi!</h2>
+                    <p id="wish-message"></p>
+                </div>
+
+                <div class="lyrics-container">
+                    <div id="lyrics-lines">
+                        <!-- Lyrics will be injected here -->
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button id="btn-back" class="glass-btn small-btn">← Choose Another</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Small visible YouTube Player to avoid browser autoplay blocks -->
+    <div id="player-container">
+        <div id="player"></div>
+    </div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
